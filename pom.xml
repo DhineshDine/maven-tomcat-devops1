@@ -15,6 +15,7 @@
     </properties>
 
 	<dependencies>
+        <!-- Standard Servlet API 4.0.1 for Java 8 / Tomcat 9+ -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
@@ -22,6 +23,7 @@
             <scope>provided</scope>
         </dependency>
 
+		<!-- Updated JUnit for testing -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -29,6 +31,7 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- Updated Log4j for security -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
@@ -51,26 +54,21 @@
 				<configuration>
 					<source>${maven.compiler.source}</source>
 					<target>${maven.compiler.target}</target>
-					<sourceDirectory>${basedir}</sourceDirectory>
+					<!-- REMOVED: <sourceDirectory>${basedir}</sourceDirectory> 
+					     Maven will now correctly look in src/main/java -->
 				</configuration>
 			</plugin>
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>3.3.2</version> 
+				<version>3.3.2</version>
 				<configuration>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
-					<warSourceDirectory>${basedir}</warSourceDirectory>
-                    <webResources>
-                        <resource>
-                            <directory>${basedir}</directory>
-                            <targetPath>WEB-INF</targetPath>
-                            <includes>
-                                <include>web.xml</include>
-                            </includes>
-                        </resource>
-                    </webResources>
+					<!-- REMOVED: <warSourceDirectory>${basedir}</warSourceDirectory> 
+					     Maven will now correctly look in src/main/webapp -->
+					<!-- REMOVED: The entire custom <webResources> block. 
+					     Maven will now correctly include src/main/webapp/WEB-INF/web.xml -->
 				</configuration>
 			</plugin>
 		</plugins>
