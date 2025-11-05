@@ -5,13 +5,13 @@
 		<title>Welcome to our new Maven web application</title>
 		<link
 			rel="stylesheet"
-			href="http://www.learntek.org/wp-content/uploads/2017/08/jenkins_image.png"
+			href="https://www.linkedin.com/in/dhineshkumar-mm-a01778212/"
 		/>
 	</head>
 	<body>
 		<div class="jumbotron" style="background-color: white">
 			<h1 class="text-center">Welcome to our new Maven web Application</h1>
-			<h1>Hello GLS_A students by Nadher</h1>
+			<h1>Hello Teams </h1>
 			<img
 				src="https://www.tek-up.de/plans/img/logo-header.png"
 				alt="Spidertocat"
@@ -21,8 +21,7 @@
 			/>
 			<h1 class="text-center">My Web Server deployment is done with jenkins</h1>
 			<h2 class="text-center">
-				This project is auto-deployed by SCM Webhook trigger with tek-up and
-				using webhook relay tunneling
+				This project is auto-deployed by cron trigger with tek-up
 			</h2>
 		</div>
 	</body>
